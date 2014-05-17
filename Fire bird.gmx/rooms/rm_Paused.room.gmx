@@ -52,7 +52,7 @@
   <instances>
     <instance objName="obj_btn_exit" x="288" y="256" name="inst_780340A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_restart" x="288" y="128" name="inst_3455B24F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_btn_upg" x="240" y="176" name="inst_64DA6A1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_btn_upg" x="288" y="192" name="inst_64DA6A1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
