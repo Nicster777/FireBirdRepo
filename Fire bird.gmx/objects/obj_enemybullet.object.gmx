@@ -44,7 +44,7 @@ if (global.kills == 25){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_bullet2">
+    <event eventtype="4" ename="obj_bulletupg">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -67,7 +67,7 @@ if (global.kills == 25){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_bulletupg">
+    <event eventtype="4" ename="obj_bullet2">
       <action>
         <libid>1</libid>
         <id>603</id>
