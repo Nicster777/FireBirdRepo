@@ -28,6 +28,8 @@
             <string>//Variables
 Hp = 5;
 
+image_speed = 0;
+aaron = false;
 
 //Motion
 vspeed = 2;
@@ -48,7 +50,15 @@ if (global.game_phase == 4){
     vspeed = 5;
 }
 
-
+// aaron
+if (irandom(1000) == 0)
+{
+    image_index = 1;
+} 
+else
+{
+    image_index = 0;
+}
 
 </string>
           </argument>
@@ -74,31 +84,32 @@ if (global.game_phase == 4){
             <kind>1</kind>
             <string>enemyShoot();
 
-//Kills
-if (Hp &lt;= 0){
+// kills
+if (Hp &lt;= 0)
+{
     global.kills++;
     global.coins++;
     
     ammoDrop = irandom(15)
     
-    if (ammoDrop == 1) {
+    if (ammoDrop == 1) 
+    {
        instance_create(x,y,obj_ammo);
     }
     
     instance_destroy();
 }
 
-if (global.game_phase == 2){
-    if floor (random(35)) &lt; 1 {
-       instance_create(x,y,obj_enemybullet);
-    }
-}
 
-if (global.game_phase == 3){
-    if floor (random(25)) &lt; 1 {
-       instance_create(x,y,obj_enemybullet);
-    }
-}
+
+
+
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>

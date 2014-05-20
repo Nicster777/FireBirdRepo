@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -122,6 +122,17 @@ playerPhase();
 playerSheild();
 playerDeath();
 playerAmmoTracking();
+playerParticle();
+
+// particle
+if (image_index == 0 || image_index == 1)
+{
+    part_particles_create(global.psmain,x-10,y+30,global.pt1,5);
+    part_particles_create(global.psmain,x+10,y+30,global.pt1,5);
+    part_particles_create(global.psmain,x-25,y+25,global.pt1,5);
+    part_particles_create(global.psmain,x+25,y+25,global.pt1,5);
+}
+
 
 //Boss Start
 if (global.kills == 150 &amp;&amp; global.game_phase == 5){
