@@ -45,6 +45,7 @@
     <background>background\bkgr_Death</background>
     <background>background\bkgr_play</background>
     <background>background\bkgr_boss</background>
+    <background>background\bkgr_main</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -67,12 +68,14 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fn_default</font>
+    <font>fonts\fn_mainMenu</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\obj_contol</object>
       <object>objects\obj_spawn</object>
       <object>objects\obj_coin</object>
+      <object>objects\obj_mainMenu</object>
     </objects>
     <objects name="Buttons">
       <object>objects\obj_boss_fight</object>
