@@ -125,7 +125,7 @@ playerAmmoTracking();
 playerParticle();
 
 // particle
-if (image_index == 0 || image_index == 1)
+if (image_index == 0 || image_index == 1 &amp;&amp; room == rm_play)
 {
     part_particles_create(global.psmain,x-10,y+30,global.pt1,5);
     part_particles_create(global.psmain,x+10,y+30,global.pt1,5);

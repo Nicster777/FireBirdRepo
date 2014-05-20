@@ -115,6 +115,7 @@ if (room == rm_1)
         draw_set_font(fn_default);
         draw_set_color(c_red);
         draw_text(view_xview+16, view_yview+30,"Press Space to get Kills!");
+        draw_set_color(c_black);
     
     }
 
@@ -123,6 +124,7 @@ if (room == rm_1)
         draw_set_font(fn_default);
         draw_set_color(c_red);
         draw_text(view_xview+16, view_yview+30,"Level 2!");
+        draw_set_color(c_black);
     }
     
     if global.game_phase == 2
@@ -130,6 +132,7 @@ if (room == rm_1)
         draw_set_font(fn_default);
         draw_set_color(c_red);
         draw_text(view_xview+16, view_yview+30,"Level 3!");
+        draw_set_color(c_black);
     
     }
 
@@ -138,6 +141,7 @@ if (room == rm_1)
         draw_set_font(fn_default);
         draw_set_color(c_red);
         draw_text(view_xview+16, view_yview+30,"Level 4!");
+        draw_set_color(c_black);
         
     }
     if global.game_phase == 4
@@ -145,6 +149,7 @@ if (room == rm_1)
         draw_set_font(fn_default);
         draw_set_color(c_red);
         draw_text(view_xview+16, view_yview+30,"Prepare to DIE!!");
+        draw_set_color(c_black);
         
     }
 }
@@ -155,6 +160,7 @@ if (room == rm_play || room == rm_boss || room == rm_upg)
     draw_set_font(fn_default);
     draw_set_color(c_red);
     draw_text(view_xview+35, view_yview, global.coins);
+    draw_set_color(c_black);
 }
 
 

@@ -14,6 +14,7 @@ if (alarm[0] == 15 && dead == true)
 }
 */
 
+/*
 if (room == rm_play && alarm[1] <= 0 && dead == true) 
 {
     room_goto (rm_Death);
@@ -22,4 +23,6 @@ if (room == rm_boss && alarm[1] <= 0 && dead == true)
 {
     room_goto (rm_Death);
 }
+*/
 
+if (dead == true) { room_goto(rm_Death); }
