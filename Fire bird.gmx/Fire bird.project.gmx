@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="6" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -56,7 +57,11 @@
       <script>scripts\playerDeath.gml</script>
       <script>scripts\playerBulletUpgrades.gml</script>
       <script>scripts\playerAmmoTracking.gml</script>
-      <script>scripts\playerParticle.gml</script>
+      <script>scripts\playerParticleInit.gml</script>
+      <script>scripts\playerLoseSheildPartInit.gml</script>
+      <scripts name="Player Bullets">
+        <script>scripts\bullet2ParticleInit.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Enemies">
       <script>scripts\bossShooting.gml</script>
@@ -64,6 +69,9 @@
     </scripts>
     <scripts name="Controller">
       <script>scripts\spawnEnemy.gml</script>
+    </scripts>
+    <scripts name="Generic">
+      <script>scripts\explosionPartInit.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

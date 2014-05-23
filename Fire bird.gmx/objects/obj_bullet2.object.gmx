@@ -49,12 +49,19 @@ hp = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Hitting Enemy
+            <string>bullet2ParticleInit();
+
+//Hitting Enemy
 hit = instance_place(x,y,obj_enemy);
 if (hit != noone)
 {
     hit.Hp -= 1;
     instance_destroy();
+}
+
+if (room == rm_play)
+{
+    part_particles_create(global.psmain,x+1,y+8,global.pt2,5);
 }
 </string>
           </argument>

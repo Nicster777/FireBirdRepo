@@ -1,28 +1,21 @@
-//Death
-if (P_Hp <= 0) 
+// death
+if (P_Hp == 0)
 {
-    //instance_create(obj_player.x,obj_player.y,obj_explosion);
+    global.dead = true;
+}
+
+if (global.dead)
+{       
+    part_particles_create(global.psmain4,x,y,global.pt4,50);
+    //show_debug_message("Player!")  
     instance_destroy();
-    alarm[1] = 15;
-    Paused = true;
-    dead = true;
 }
-/*
-if (alarm[0] == 15 && dead == true) 
-{
-    instance_create(obj_player.x,obj_player.y,obj_explosion);
-}
-*/
 
-/*
-if (room == rm_play && alarm[1] <= 0 && dead == true) 
-{
-    room_goto (rm_Death);
-}
-if (room == rm_boss && alarm[1] <= 0 && dead == true) 
-{
-    room_goto (rm_Death);
-}
-*/
 
-if (dead == true) { room_goto(rm_Death); }
+
+
+
+
+
+
+

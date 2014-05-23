@@ -65,7 +65,7 @@ if (Key_PR)
 }
 if (Key_KS)
 {
-    playersheild = false
+    Sheild = 0;
 }
 if (Key_CO)
 {

@@ -1,4 +1,4 @@
-if (weaponSelect == 1) 
+ if (weaponSelect == 1) 
 {
     if (bullet2Ammo <= 0) 
     {

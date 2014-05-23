@@ -94,7 +94,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_end();
+            <string>if (show_question("Quit Game?"))
+{
+    game_end();
+}
 
 if(room == rm_bossbegin){
     room_goto(rm_play);

@@ -27,14 +27,16 @@
             <kind>1</kind>
             <string>//Variables
 P_Hp = 100;
+//oldhp = P_Hp;
 Sheild = 50;
 global.kills = 0;
 global.game_phase = 0;
 playersheild = true;
 sheildTimer = 1000;
-dead = false;
-lostsheild = false;
-canfire = false
+global.dead = false;
+//lostsheild = false;
+canfire = false;
+oldshield = Sheild;
 
 //Weapons
 bullet2Ammo = 100;
@@ -122,13 +124,14 @@ playerPhase();
 playerSheild();
 playerDeath();
 playerAmmoTracking();
-playerParticle();
+playerParticleInit();
+playerLoseSheildPartInit();
 
 // particle
 if (image_index == 0 || image_index == 1 &amp;&amp; room == rm_play)
 {
-    part_particles_create(global.psmain,x-10,y+30,global.pt1,5);
-    part_particles_create(global.psmain,x+10,y+30,global.pt1,5);
+    part_particles_create(global.psmain,x-11,y+35,global.pt1,5);
+    part_particles_create(global.psmain,x+11,y+35,global.pt1,5);
     part_particles_create(global.psmain,x-25,y+25,global.pt1,5);
     part_particles_create(global.psmain,x+25,y+25,global.pt1,5);
 }
@@ -160,10 +163,11 @@ if (keyboard_check(ord("E"))) {
 
 if (Sheild == 50) {
    P_Hp++;
-   if (P_Hp &gt;= 100) {
+   if (P_Hp &gt; 100) {
       P_Hp = 100;
    }
 }
+
 </string>
           </argument>
         </arguments>
@@ -186,13 +190,10 @@ if (Sheild == 50) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Sheild -= 10;
+            <string>if (Sheild &gt; 0) Sheild -= 10;
 
-if (lostsheild){
-    P_Hp -= 8;
-    if (P_Hp &lt;= 0){
-        room_goto(rm_Death);
-    }
+if (Sheild &lt;= 0){
+    P_Hp -= 20;
 }
 </string>
           </argument>
@@ -217,19 +218,15 @@ if (lostsheild){
           <argument>
             <kind>1</kind>
             <string>//Sheilds
-if (lostsheild == false) {Sheild--;}
+if (Sheild &gt; 0) {Sheild--;}
 
 //Hp
 if (global.kills == 5){
-    if (lostsheild){
+    if (Sheild &lt;= 0){
         P_Hp -= 10;
     }
 }  
-if (lostsheild){
-    if (image_index == 1){
-        P_Hp -= 20;
-    }
-}  
+
 </string>
           </argument>
         </arguments>
@@ -252,14 +249,16 @@ if (lostsheild){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Sheild -= 5
+            <string>if (Sheild &gt; 0)Sheild -= 10
 
-if (image_index == 1){
-    P_Hp -= 1
-    with other {
-         instance_destroy();
-    }
+if (Sheild &lt;= 0){
+    P_Hp -= 20
+    with other { instance_destroy(); }
 }
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -307,9 +306,9 @@ game_restart();
           <argument>
             <kind>1</kind>
             <string>//Alarm
-if (alarm [0] == -1)
+if (alarm[0] == -1)
 {
-       alarm = 5;
+       alarm[0] = 4;
 }
 </string>
           </argument>
@@ -334,21 +333,30 @@ if (alarm [0] == -1)
           <argument>
             <kind>1</kind>
             <string>draw_self();
-if (room == rm_play &amp;&amp; rm_boss) {
-   draw_set_font(fn_default);
-   draw_text(50,50,string(bullet2Ammo));
-}
-if (room == rm_play &amp;&amp; rm_boss) {
+
+if (room == rm_play || room == rm_boss) 
+{
    draw_set_alpha(0.5);
    draw_healthbar((room_width/2) - 128, 860, (room_width/2) + 128, 890, P_Hp, c_black, c_red, c_green,0,false,true);
    draw_set_alpha(1);
 }
 
-if (room == rm_play &amp;&amp; rm_boss) {
+if (room == rm_play || room == rm_boss) 
+{
    draw_set_alpha(0.5);
    draw_healthbar((room_width/2) - 64, 820, (room_width/2) + 192, 850, Sheild, c_black, c_red, c_blue,0,false,true);
    draw_set_alpha(1);
 }
+
+// special ammo
+if (room == rm_play || room == rm_boss) 
+{  
+   draw_set_font(fn_default);
+   draw_set_color(c_red);
+   draw_text(50,50,"Special Ammo: " + string(obj_player.bullet2Ammo));
+   draw_set_color(c_black);
+}
+
 </string>
           </argument>
         </arguments>

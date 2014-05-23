@@ -12,14 +12,10 @@ if (Sheild <= 49)
 }
 
 //Sheilds
-if (Sheild <= 0)
-{
-    lostsheild = true;
+if ((Sheild <= 0) && (oldshield != Sheild)) {
+    image_index = 1;    
+    part_particles_create(global.psmain3,x,y,global.pt3,50);
 }
 
-if (lostsheild == true)
-{
-   image_index = 1;
-}
-
+oldshield = Sheild;
 
