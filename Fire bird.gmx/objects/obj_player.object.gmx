@@ -161,6 +161,9 @@ if (keyboard_check(ord("E"))) {
    weaponSelect = 1;
 }
 
+// shields
+if (Sheild &gt;= 1) { image_index = 0; }
+
 if (Sheild == 50) {
    P_Hp++;
    if (P_Hp &gt; 100) {
