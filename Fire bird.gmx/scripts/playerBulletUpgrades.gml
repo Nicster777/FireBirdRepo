@@ -3,6 +3,7 @@ if (weaponSelect == 0)
 {
     if (global.ammo_upg >= 1 && canfire == true)
     {
+        audio_play_sound(sndShoot,0,false);
         bullet2 = instance_create(x,y-30,obj_bullet);
         bullet3 = instance_create(x,y-30,obj_bullet);
         
@@ -12,6 +13,7 @@ if (weaponSelect == 0)
 
     if (global.ammo_upg >= 2 && canfire == true)
     {
+        audio_play_sound(sndShoot,0,false);
         bullet1 = instance_create(x,y-30,obj_bullet);
         bullet2 = instance_create(x,y-30,obj_bullet);
         bullet3 = instance_create(x,y-30,obj_bullet);
@@ -24,6 +26,7 @@ if (weaponSelect == 0)
     }
     if (global.ammo_upg >= 3 && canfire == true)
     {
+        audio_play_sound(sndShoot,0,false);
         bullet1 = instance_create(x,y-30,obj_bulletupg);
         bullet2 = instance_create(x,y-30,obj_bullet);
         bullet3 = instance_create(x,y-30,obj_bullet);
@@ -38,6 +41,7 @@ if (weaponSelect == 0)
     }
     if (global.ammo_upg >= 4 && canfire == true)
     {
+        audio_play_sound(sndShoot,0,false);
         bullet1 = instance_create(x,y-30,obj_bulletupg);
         bullet2 = instance_create(x,y-30,obj_bulletupg);
         bullet3 = instance_create(x,y-30,obj_bulletupg);

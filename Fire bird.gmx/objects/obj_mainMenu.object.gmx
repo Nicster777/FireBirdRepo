@@ -25,7 +25,53 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>version = "1.1.1"
+            <string>version = "1.1.2"
+lore = " the Aesthetics Update!"
+
+words[1] = "Agrestic"
+words[2] = "Foment"
+words[3] = "Gobemouche"
+words[4] = "Pejorist"
+words[5] = "Temerity"
+words[6] = "Unasinous"
+words[7] = "Mendacious"
+words[8] = "Postprandial"
+words[9] = "Jocoserious"
+words[10] = "Lamia"
+words[11] = "Internecine"
+words[12] = "Floccinaucinihilipilification"
+words[13] = "Dogma"
+words[14] = "Deipnosophist"
+words[15] = "Caitiff"
+words[16] = "Bloviate"
+words[17] = "Blind Freddy"
+words[18] = "Balter"
+words[19] = "Apolaustic"
+words[20] = "Poobah"
+words[21] = "Maunder"
+words[22] = "Odalisque"
+words[23] = "Gauche"
+words[24] = "Zenith"
+words[25] = "Ubiquitous"
+words[26] = "Ecdysiast"
+words[27] = "Bailiwick"
+words[28] = "Egregious"
+words[29] = "Eleemosynary"
+words[30] = "Zephyr"
+words[31] = "Youtube.com/Saycheeks1"
+words[32] = "Youtube.com/Nicster777"
+words[33] = "Borborygmus"
+words[34] = "Schadenfreude"
+words[35] = "Godspeed"
+words[36] = "Porphyrophobia"
+words[37] = "Poltroon"
+words[38] = "Jocularity"
+words[39] = "Mulct"
+words[40] = "Ricochet"
+
+randomize();
+wotd = words[random_range(1,40)]
+
 </string>
           </argument>
         </arguments>
@@ -49,7 +95,9 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_font(fn_mainMenu);
-draw_text(x,y,"Version: Alpha " + string(version) + " the Particles update!");
+draw_text(x,y,"Version: Alpha " + string(version) + string(lore));
+
+draw_text(x,y+20,"Word of the Day: " + string(wotd))
 </string>
           </argument>
         </arguments>

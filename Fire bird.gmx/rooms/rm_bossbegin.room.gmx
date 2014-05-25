@@ -51,7 +51,6 @@
   </views>
   <instances>
     <instance objName="obj_boss_fight" x="288" y="160" name="inst_7467B19C" locked="0" code="" scaleX="3.05999994277954" scaleY="2.5" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="288" y="288" name="inst_9C14F4B2" locked="0" code="" scaleX="2.13000011444092" scaleY="2.4193549156189" colour="4294967295" rotation="0"/>
     <instance objName="obj_btn_exit" x="288" y="256" name="inst_D6C5183B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

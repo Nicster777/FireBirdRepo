@@ -118,7 +118,7 @@ iplayer = instance_number(obj_player);
 
 if ((iplayer == 0) &amp;&amp; (oldplayer != iplayer))
 {
-    alarm[0] = 50;
+    alarm[0] = 50; 
     //show_debug_message("Checked!");
 }
 

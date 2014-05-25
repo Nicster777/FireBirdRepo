@@ -77,7 +77,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="7">
+    <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -94,7 +94,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_restart();
+            <string>audio_play_sound(sndSelect,0,false);
+
+game_restart();
 </string>
           </argument>
         </arguments>

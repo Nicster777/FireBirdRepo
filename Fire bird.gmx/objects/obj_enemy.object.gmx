@@ -97,6 +97,7 @@ if (Hp &lt;= 0)
        instance_create(x,y,obj_ammo);
     }
     
+    audio_play_sound(sndEnemyDeath,0,false);
     instance_destroy();
 }
 
@@ -132,7 +133,8 @@ if (Hp &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Hp -= 4;
+            <string>audio_play_sound(sndHit,0,false);
+Hp -= 4;
 </string>
           </argument>
         </arguments>
@@ -155,7 +157,8 @@ if (Hp &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Hp -= choose(3,4,5);
+            <string>audio_play_sound(sndHit,0,false);
+Hp -= choose(3,4,5);
 </string>
           </argument>
         </arguments>
@@ -178,7 +181,8 @@ if (Hp &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Hp -= 1;
+            <string>audio_play_sound(sndHit,0,false);
+Hp -= 1;
 </string>
           </argument>
         </arguments>

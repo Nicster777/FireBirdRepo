@@ -5,7 +5,15 @@
   </Configs>
   <datafiles number="6" name="datafiles"/>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndSelect</sound>
+    <sound>sound\sndHit</sound>
+    <sound>sound\sndShoot</sound>
+    <sound>sound\sndLooseShield</sound>
+    <sound>sound\sndEnemyDeath</sound>
+    <sound>sound\sndEnemyShoot</sound>
+    <sound>sound\sndPlayerDeath</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Buttons">
       <sprite>sprites\spr_btn_start</sprite>

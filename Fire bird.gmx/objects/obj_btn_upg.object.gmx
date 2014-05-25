@@ -94,7 +94,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_upg);
+            <string>audio_play_sound(sndSelect,0,false);
+
+room_goto(rm_upg);
 </string>
           </argument>
         </arguments>
